@@ -1,359 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sayali Joshi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayali Joshi</title>
 
-<style>
-:root{
-  --pink-bg:#fdf2f6;
-  --cream:#f7e9ee;
-  --panel:#0e1512;
-  --green:#1f7a55;
-  --green-soft:#3a9b72;
-  --text-soft:rgba(255,255,255,0.75);
-  --line:rgba(255,255,255,0.12);
-}
+  <style>
+    :root{
+      --pink-bg:#fdf2f6;
+      --cream:#f7e9ee;
+      --panel:#0e1512;
+      --green:#1f7a55;
+      --green-soft:#3a9b72;
+      --text-soft:rgba(255,255,255,0.75);
+      --line:rgba(255,255,255,0.12);
+    }
 
-*{box-sizing:border-box}
+    *{box-sizing:border-box}
 
-body{
-  margin:0;
-  background:var(--pink-bg);
-  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  padding:30px;
-  color:var(--green);
-}
+    body{
+      margin:0;
+      background:var(--pink-bg);
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:30px;
+      color:var(--green);
+    }
 
-.frame{
-  max-width:1200px;
-  margin:auto;
-  background:var(--cream);
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 20px 50px rgba(0,0,0,0.1);
-}
+    .frame{
+      max-width:1200px;
+      margin:auto;
+      background:var(--cream);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 20px 50px rgba(0,0,0,0.1);
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:38% 62%;
-}
+    .grid{
+      display:grid;
+      grid-template-columns:38% 62%;
+      min-height:720px;
+    }
 
-.left{
-  padding:40px 36px;
-}
+    .left{
+      padding:40px 36px;
+    }
 
-.left h1{
-  font-size:42px;
-  margin:0 0 16px;
-  color:var(--green);
-  font-weight:600;
-}
+    .left h1{
+      font-size:42px;
+      margin:0 0 16px;
+      color:var(--green);
+      font-weight:600;
+    }
 
-.line{
-  height:1px;
-  background:rgba(0,0,0,0.2);
-  margin-bottom:20px;
-}
+    .line{
+      height:1px;
+      background:rgba(0,0,0,0.2);
+      margin-bottom:20px;
+    }
 
-.intro-copy{
-  font-size:14px;
-  line-height:1.7;
-  color:#2f6d54;
-}
+    .intro-copy{
+      font-size:14px;
+      line-height:1.7;
+      color:#2f6d54;
+      max-width:320px;
+    }
 
-.right{
-  background:var(--panel);
-  color:white;
-  padding:28px 30px 30px;
-}
+    .right{
+      background:var(--panel);
+      color:white;
+      padding:28px 30px 30px;
+    }
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:20px;
-}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:20px;
+    }
 
-.name{
-  margin:0;
-  font-size:26px;
-  font-weight:600;
-  color:#eaf6ef;
-}
+    .name{
+      margin:0;
+      font-size:26px;
+      font-weight:600;
+      color:#eaf6ef;
+    }
 
-.role{
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--text-soft);
-  margin-top:6px;
-}
+    .role{
+      font-size:11px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:var(--text-soft);
+      margin-top:6px;
+    }
 
-.profile-photo{
-  width:120px;
-  height:150px;
-  object-fit:cover;
-  border-radius:6px;
-  border:1px solid var(--line);
-}
+    .profile-photo{
+      width:120px;
+      height:150px;
+      object-fit:cover;
+      border-radius:8px;
+      border:1px solid var(--line);
+      display:block;
+    }
 
-.content{
-  margin-top:24px;
-  display:grid;
-  grid-template-columns:1fr 220px;
-  gap:20px;
-}
+    .hero-image{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      border-radius:8px;
+      margin-top:18px;
+      margin-bottom:20px;
+      border:1px solid var(--line);
+      display:block;
+    }
 
-.projects-panel{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
+    .content{
+      margin-top:4px;
+      display:grid;
+      grid-template-columns:1fr 220px;
+      gap:20px;
+    }
 
-.project-card{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,0.03);
-}
+    .projects-panel{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
 
-.project-card img{
-  width:100%;
-  height:110px;
-  object-fit:cover;
-  filter:brightness(0.85);
-}
+    .project-card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.03);
+      border-radius:8px;
+      overflow:hidden;
+    }
 
-.project-copy{
-  padding:10px 12px 12px;
-}
+    .project-card img{
+      width:100%;
+      height:110px;
+      object-fit:cover;
+      filter:brightness(0.85);
+      display:block;
+    }
 
-.project-card h4{
-  margin:0 0 6px;
-  font-size:13px;
-  font-weight:600;
-  color:#d8f3e4;
-}
+    .project-copy{
+      padding:10px 12px 12px;
+    }
 
-.project-card p{
-  margin:0;
-  font-size:12px;
-  line-height:1.5;
-  color:var(--text-soft);
-}
+    .project-card h4{
+      margin:0 0 6px;
+      font-size:13px;
+      font-weight:600;
+      color:#d8f3e4;
+    }
 
-.side-stack{
-  display:grid;
-  gap:14px;
-}
+    .project-card p{
+      margin:0;
+      font-size:12px;
+      line-height:1.5;
+      color:var(--text-soft);
+    }
 
-.recent,
-.services{
-  border:1px solid var(--line);
-  padding:14px;
-  background:rgba(255,255,255,0.03);
-}
+    .side-stack{
+      display:grid;
+      gap:14px;
+    }
 
-.recent h3,
-.services h3{
-  margin:0 0 10px;
-  font-size:13px;
-  font-weight:600;
-}
+    .recent,
+    .services{
+      border:1px solid var(--line);
+      padding:14px;
+      background:rgba(255,255,255,0.03);
+      border-radius:8px;
+    }
 
-.recent-item{
-  display:grid;
-  grid-template-columns:70px 1fr;
-  gap:10px;
-  margin-bottom:8px;
-}
+    .recent h3,
+    .services h3{
+      margin:0 0 10px;
+      font-size:13px;
+      font-weight:600;
+      color:#d8f3e4;
+    }
 
-.recent-item img{
-  width:70px;
-  height:70px;
-  object-fit:cover;
-}
+    .recent-item{
+      display:grid;
+      grid-template-columns:70px 1fr;
+      gap:10px;
+      margin-bottom:10px;
+      align-items:center;
+    }
 
-.meta{
-  font-size:11px;
-  color:var(--text-soft);
-  line-height:1.5;
-}
+    .recent-item:last-child{
+      margin-bottom:0;
+    }
 
-.service-card{
-  padding-top:8px;
-  border-top:1px solid rgba(255,255,255,0.08);
-}
+    .recent-item img{
+      width:70px;
+      height:70px;
+      object-fit:cover;
+      border-radius:6px;
+      display:block;
+    }
 
-.service-card:first-of-type{
-  border-top:0;
-}
+    .meta{
+      font-size:11px;
+      color:var(--text-soft);
+      line-height:1.5;
+    }
 
-.service-card h4{
-  font-size:12px;
-  margin:0;
-}
+    .service-card{
+      padding-top:8px;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
 
-.service-card p{
-  margin:3px 0 0;
-  font-size:11px;
-  color:var(--text-soft);
-}
+    .service-card:first-of-type{
+      border-top:0;
+      padding-top:0;
+    }
 
-.links{
-  margin-top:20px;
-  display:flex;
-  gap:14px;
-}
+    .service-card h4{
+      font-size:12px;
+      margin:0;
+      color:#d8f3e4;
+    }
 
-.links a{
-  color:#c9f3dc;
-  text-decoration:none;
-  font-size:12px;
-}
+    .service-card p{
+      margin:3px 0 0;
+      font-size:11px;
+      color:var(--text-soft);
+    }
 
-.links a:hover{color:white}
+    .links{
+      margin-top:20px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
 
-@media(max-width:1000px){
-  .grid{grid-template-columns:1fr}
-  .content{grid-template-columns:1fr}
-  .projects-panel{grid-template-columns:1fr}
-}
-</style>
+    .links a{
+      color:#c9f3dc;
+      text-decoration:none;
+      font-size:12px;
+    }
+
+    .links a:hover{
+      color:white;
+    }
+
+    @media(max-width:1000px){
+      .grid{grid-template-columns:1fr}
+      .content{grid-template-columns:1fr}
+      .projects-panel{grid-template-columns:1fr}
+      .left{padding:30px}
+      .right{padding:24px}
+    }
+  </style>
 </head>
 
 <body>
+  <main class="frame">
+    <div class="grid">
 
-<main class="frame">
+      <div class="left">
+        <h1>Portfolio</h1>
+        <div class="line"></div>
 
-<div class="grid">
+        <div class="intro-copy">
+          Cloud support engineer focused on Linux systems, distributed data platforms, automation, and practical LLM-based solutions.
+        </div>
+      </div>
 
-<div class="left">
+      <div class="right">
 
-<h1>Portfolio</h1>
-<div class="line"></div>
+        <div class="topbar">
+          <div>
+            <h2 class="name">Sayali Joshi</h2>
+            <div class="role">Cloud • Linux • Distributed Systems • LLMs</div>
+          </div>
 
-<div class="intro-copy">
-Cloud support engineer focused on Linux systems, distributed data platforms, automation, and practical LLM‑based solutions.
-</div>
+          <img class="profile-photo" src="DSC01430.JPG" alt="Profile Photo">
+        </div>
 
-</div>
+        <img class="hero-image" src="DSC00392.JPG" alt="Highlight Image">
 
-<div class="right">
+        <div class="content">
 
-<div class="topbar">
-<div>
-<h2 class="name">Sayali Joshi</h2>
-<div class="role">Cloud • Linux • Distributed Systems • LLMs</div>
-</div>
+          <div class="projects-panel">
 
-<label for="photoUpload" style="cursor:pointer;display:block;">
-<img id="profilePreview" class="profile-photo" src="https://raw.githubusercontent.com/Sayalijoshi25/Sayalijoshi25.github.io/main/DSC00392.JPG" alt="Profile Photo">
-</label>
-<input type="file" id="photoUpload" accept="image/*" style="display:none" onchange="previewPhoto(event)">
-</div>
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="AI DevOps Observability">
+              <div class="project-copy">
+                <h4>AI DevOps Observability</h4>
+                <p>AI workflow for log analysis and anomaly detection.</p>
+              </div>
+            </div>
 
-<div class="content">
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="LLM RAG System">
+              <div class="project-copy">
+                <h4>LLM RAG System</h4>
+                <p>Retrieval-augmented generation pipelines.</p>
+              </div>
+            </div>
 
-<div class="projects-panel">
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80" alt="Streaming Data Pipeline">
+              <div class="project-copy">
+                <h4>Streaming Data Pipeline</h4>
+                <p>Event-driven cloud data processing pipeline.</p>
+              </div>
+            </div>
 
-<div class="project-card">
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80">
-<div class="project-copy">
-<h4>AI DevOps Observability</h4>
-<p>AI workflow for log analysis and anomaly detection.</p>
-</div>
-</div>
+            <div class="project-card">
+              <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80" alt="Cloud Operations">
+              <div class="project-copy">
+                <h4>Cloud Operations</h4>
+                <p>Production support and distributed troubleshooting.</p>
+              </div>
+            </div>
 
-<div class="project-card">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80">
-<div class="project-copy">
-<h4>LLM RAG System</h4>
-<p>Retrieval‑augmented generation pipelines.</p>
-</div>
-</div>
+          </div>
 
-<div class="project-card">
-<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80">
-<div class="project-copy">
-<h4>Streaming Data Pipeline</h4>
-<p>Event‑driven cloud data processing pipeline.</p>
-</div>
-</div>
+          <div class="side-stack">
 
-<div class="project-card">
-<img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80">
-<div class="project-copy">
-<h4>Cloud Operations</h4>
-<p>Production support and distributed troubleshooting.</p>
-</div>
-</div>
+            <section class="recent">
+              <h3>Recent Work</h3>
 
-</div>
+              <div class="recent-item">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80" alt="Recent work 1">
+                <div class="meta">Cloud infrastructure troubleshooting</div>
+              </div>
 
-<div class="side-stack">
+              <div class="recent-item">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Recent work 2">
+                <div class="meta">AI engineering projects</div>
+              </div>
+            </section>
 
-<section class="recent">
-<h3>Recent Work</h3>
+            <section class="services">
+              <h3>Focus</h3>
 
-<div class="recent-item">
-<img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80">
-<div class="meta">Cloud infrastructure troubleshooting</div>
-</div>
+              <div class="service-card">
+                <h4>Cloud Engineering</h4>
+                <p>Infrastructure reliability and automation</p>
+              </div>
 
-<div class="recent-item">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80">
-<div class="meta">AI engineering projects</div>
-</div>
+              <div class="service-card">
+                <h4>Distributed Systems</h4>
+                <p>Data platforms and operations</p>
+              </div>
 
-</section>
+              <div class="service-card">
+                <h4>AI Systems</h4>
+                <p>LLM workflows and RAG pipelines</p>
+              </div>
+            </section>
 
-<section class="services">
-<h3>Focus</h3>
+          </div>
 
-<div class="service-card">
-<h4>Cloud Engineering</h4>
-<p>Infrastructure reliability and automation</p>
-</div>
+        </div>
 
-<div class="service-card">
-<h4>Distributed Systems</h4>
-<p>Data platforms and operations</p>
-</div>
+        <div class="links">
+          <a href="https://github.com/sayalijoshi25" target="_blank">GitHub</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a href="mailto:your@email.com">Email</a>
+        </div>
 
-<div class="service-card">
-<h4>AI Systems</h4>
-<p>LLM workflows and RAG pipelines</p>
-</div>
-
-</section>
-
-</div>
-
-</div>
-
-<div class="links">
-<a href="https://github.com/sayalijoshi25">GitHub</a>
-<a href="https://linkedin.com">LinkedIn</a>
-<a href="mailto:your@email.com">Email</a>
-</div>
-
-</div>
-
-</div>
-
-</main>
-
-<script>
-function previewPhoto(event){
-  const file = event.target.files[0];
-  if(!file) return;
-  const reader = new FileReader();
-  reader.onload = function(e){
-    document.getElementById('profilePreview').src = e.target.result;
-  };
-  reader.readAsDataURL(file);
-}
-</script>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
