@@ -211,3 +211,250 @@
       gap: 10px;
       margin-top: 14px;
     }
+
+    .chip {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(124, 156, 255, 0.12);
+      border: 1px solid rgba(124, 156, 255, 0.22);
+      color: #d9e2ff;
+      font-size: 0.93rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 22px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(124, 156, 255, 0.35);
+    }
+
+    .project-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+    }
+
+    .project-card p,
+    .section-card p,
+    .contact-card p {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .project-links,
+    .social {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      color: #d8e0ff;
+      font-weight: 600;
+    }
+
+    .contact-card {
+      padding: 24px;
+    }
+
+    .footer {
+      padding: 36px 0 52px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .muted-list {
+      color: var(--muted);
+      padding-left: 18px;
+      margin: 10px 0 0;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -0.8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Sayali Joshi</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Cloud • Linux • Distributed Systems • AI/LLMs</div>
+        <h1>Building reliable cloud and AI systems with strong engineering foundations.</h1>
+        <p class="lead">
+          Portfolio highlighting my experience in cloud platforms, Linux systems, distributed databases, automation, and LLM-based AI systems. Includes technical projects and engineering work across modern data and AI infrastructure.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/sayalijoshi25" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="stat-grid">
+          <div class="stat">
+            <h3>5+ yrs</h3>
+            <p>Experience across cloud support, Linux operations, and infrastructure troubleshooting.</p>
+          </div>
+          <div class="stat">
+            <h3>Cloud + AI</h3>
+            <p>Hands-on work spanning automation, observability, data systems, and LLM workflows.</p>
+          </div>
+          <div class="stat">
+            <h3>Distributed</h3>
+            <p>Experience with modern platforms, databases, and production-scale system reliability.</p>
+          </div>
+          <div class="stat">
+            <h3>Portfolio</h3>
+            <p>Selected projects, technical work, and engineering-focused problem solving.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="section-subtitle">A concise introduction for recruiters, hiring managers, and collaborators.</p>
+        <div class="about-grid">
+          <div class="section-card">
+            <p>
+              I work at the intersection of cloud infrastructure, Linux-based systems, distributed data platforms, automation, and AI-driven applications. My background includes solving production issues, improving operational reliability, and building practical technical solutions that connect infrastructure with real business needs.
+            </p>
+            <p>
+              I am especially interested in roles that combine systems thinking, customer impact, and modern engineering across cloud, data, and AI.
+            </p>
+          </div>
+          <div class="section-card" id="skills">
+            <h3 style="margin-top:0;">Core Skills</h3>
+            <div class="chips">
+              <span class="chip">Linux</span>
+              <span class="chip">AWS</span>
+              <span class="chip">Azure</span>
+              <span class="chip">GCP</span>
+              <span class="chip">Python</span>
+              <span class="chip">Bash</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">Distributed Databases</span>
+              <span class="chip">Automation</span>
+              <span class="chip">Observability</span>
+              <span class="chip">LLMs</span>
+              <span class="chip">RAG</span>
+              <span class="chip">Incident Response</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Replace these with your actual GitHub repositories or demos.</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>AI DevOps Observability Platform</h3>
+            <p>Built an AI-driven platform for log analysis, anomaly detection, and troubleshooting recommendations across cloud and containerized environments.</p>
+            <div class="project-links">
+              <a href="https://github.com/sayalijoshi25" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>LLM-Based RAG System</h3>
+            <p>Designed a retrieval-augmented generation workflow integrating vector search, LLM prompting, evaluation, and customizable knowledge retrieval.</p>
+            <div class="project-links">
+              <a href="https://github.com/sayalijoshi25" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Streaming Data Pipeline</h3>
+            <p>Developed a cloud-based ingestion pipeline using event-driven components to process and classify high-volume operational data in near real time.</p>
+            <div class="project-links">
+              <a href="https://github.com/sayalijoshi25" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Keep this simple and recruiter-friendly.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 style="margin-top:0;">Where to find me</h3>
+            <div class="social">
+              <a href="https://github.com/sayalijoshi25" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a href="mailto:your-email@example.com">Email ↗</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3 style="margin-top:0;">What to customize next</h3>
+            <ul class="muted-list">
+              <li>Add your real LinkedIn URL</li>
+              <li>Add your email address</li>
+              <li>Replace project links with actual repositories</li>
+              <li>Optionally add resume PDF and certifications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Sayali Joshi. Built with GitHub Pages.</div>
+  </footer>
+</body>
+</html>
