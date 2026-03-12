@@ -1,239 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sayali Joshi</title>
-<style>
-  :root {
-    --page-bg-1: #eef7f4;
-    --page-bg-2: #f7fbff;
-    --card-bg: #ffffff;
-    --text: #183153;
-    --muted: #5f7590;
-    --blue: #2f6fed;
-    --green: #1ea672;
-    --border: #dce9f3;
-    --soft: #f3f9ff;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(180deg, var(--page-bg-1) 0%, var(--page-bg-2) 100%);
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    line-height: 1.65;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 900px;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    box-shadow: 0 18px 50px rgba(34, 84, 122, 0.08);
-    padding: 44px;
-  }
-
-  .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 28px;
-    margin-bottom: 30px;
-  }
-
-  .hero-text {
-    flex: 1;
-  }
-
-  .photo-wrap {
-    flex-shrink: 0;
-  }
-
-  .photo {
-    width: 140px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 18px;
-    border: 3px solid #e4f3ee;
-    background: linear-gradient(180deg, #eaf7ff 0%, #eefbf5 100%);
-  }
-
-  h1 {
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0 0 8px;
-    color: var(--text);
-  }
-
-  .subtitle {
-    color: var(--muted);
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-
-  .intro {
-    max-width: 580px;
-    margin: 0;
-    color: #35506f;
-  }
-
-  .links {
-    margin-top: 20px;
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .links a {
-    text-decoration: none;
-    color: var(--blue);
-    font-weight: 500;
-  }
-
-  .links a:hover {
-    color: var(--green);
-  }
-
-  .section {
-    padding-top: 22px;
-    border-top: 1px solid #edf3f8;
-    margin-top: 22px;
-  }
-
-  h2 {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 10px;
-    color: var(--text);
-  }
-
-  p {
-    margin: 0;
-    color: #35506f;
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 18px;
-    color: #35506f;
-  }
-
-  li + li {
-    margin-top: 6px;
-  }
-
-  .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 6px;
-  }
-
-  .tag {
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: var(--soft);
-    border: 1px solid #d9e8f8;
-    color: #35506f;
-    font-size: 14px;
-  }
-
-  .footer {
-    margin-top: 28px;
-    font-size: 13px;
-    color: #7b91a7;
-  }
-
-  @media (max-width: 720px) {
-    .card {
-      padding: 28px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayali Joshi</title>
+  <style>
+    :root {
+      --page-bg: #fcf7f8;
+      --card-bg: #ffffff;
+      --navy: #183153;
+      --navy-soft: #2a4569;
+      --navy-muted: #5d718b;
+      --blue: #2f6fed;
+      --green: #1ea672;
+      --border: #e8edf3;
+      --panel: #f9fbfd;
+      --tag-bg: #eef4fb;
+      --shadow: 0 18px 40px rgba(24, 49, 83, 0.08);
     }
 
-    .hero {
-      flex-direction: column-reverse;
-      align-items: center;
-      text-align: center;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--navy);
+      line-height: 1.65;
+      padding: 48px 20px;
+    }
+
+    .shell {
+      max-width: 1080px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 760px;
+    }
+
+    .sidebar {
+      background: linear-gradient(180deg, #1d3658 0%, #223c61 100%);
+      color: #ffffff;
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .photo {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .name {
+      font-size: 2rem;
+      line-height: 1.15;
+      font-weight: 700;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .role {
+      margin: 0;
+      color: rgba(255,255,255,0.78);
+      font-size: 0.98rem;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .contact-list a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-size: 0.98rem;
+    }
+
+    .contact-list a:hover {
+      color: #cfe3ff;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      width: fit-content;
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--green), #37c28f);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    .sidebar-note {
+      margin-top: auto;
+      color: rgba(255,255,255,0.64);
+      font-size: 0.88rem;
+    }
+
+    .main {
+      padding: 40px 48px 42px;
+      background: #fbfdff;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .subtitle {
+      font-size: 1.04rem;
+      color: var(--navy-muted);
+      margin: 0 0 18px;
     }
 
     .intro {
-      max-width: 100%;
+      max-width: 700px;
+      margin: 0;
+      color: var(--navy-soft);
+      font-size: 1.02rem;
     }
 
-    .links,
-    .skills {
-      justify-content: center;
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin: 0 0 18px;
+      color: var(--navy);
     }
-  }
-</style>
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project-card,
+    .interest-card,
+    .about-card,
+    .skills-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(24, 49, 83, 0.04);
+    }
+
+    .project-card,
+    .interest-card {
+      padding: 18px 18px 16px;
+      min-height: 140px;
+    }
+
+    .project-card h3,
+    .interest-card h3,
+    .about-card h3,
+    .skills-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .project-card p,
+    .interest-card p,
+    .about-card p,
+    .skills-card p {
+      margin: 0;
+      color: var(--navy-soft);
+      font-size: 0.95rem;
+    }
+
+    .project-meta {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--navy-muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 18px;
+    }
+
+    .about-card,
+    .skills-card {
+      padding: 22px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--tag-bg);
+      color: var(--navy-soft);
+      border: 1px solid #dbe7f3;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 34px;
+      color: var(--navy-muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        align-items: center;
+        text-align: center;
+      }
+
+      .contact-list {
+        align-items: center;
+      }
+
+      .main {
+        padding: 32px 24px 34px;
+      }
+
+      .grid-3,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="card">
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Sayali Joshi</h1>
-        <div class="subtitle">Cloud • Linux • Distributed Systems • LLMs</div>
-        <p class="intro">
-          Portfolio highlighting my experience in cloud platforms, Linux systems, distributed databases, automation, and LLM-based AI systems.
-        </p>
-        <div class="links">
+  <div class="shell">
+    <div class="layout">
+      <aside class="sidebar">
+        <img class="photo" src="https://via.placeholder.com/300x300.png?text=Photo" alt="Profile photo">
+
+        <div>
+          <h1 class="name">Sayali Joshi</h1>
+          <p class="role">Cloud • Linux • Distributed Systems • LLMs</p>
+        </div>
+
+        <div class="contact-list">
           <a href="https://github.com/sayalijoshi25" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/sayali-joshi-74340a172/" target="_blank">LinkedIn</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
           <a href="mailto:your-email@example.com">Email</a>
         </div>
-      </div>
 
-      <div class="photo-wrap">
-        <img class="photo" src="https://via.placeholder.com/300x360.png?text=Your+Photo" alt="Profile photo">
-      </div>
-    </section>
+        <a class="resume-btn" href="#">Résumé</a>
 
-    <section class="section">
-      <h2>About</h2>
-      <p>
-        I work across cloud infrastructure, Linux systems, distributed data platforms, and AI-driven applications. My focus is on building reliable systems and solving complex operational problems.
-      </p>
-    </section>
+        <div class="sidebar-note">Focused on cloud platforms, automation, data systems, and AI-driven engineering.</div>
+      </aside>
 
-    <section class="section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span class="tag">Linux</span>
-        <span class="tag">AWS</span>
-        <span class="tag">Azure</span>
-        <span class="tag">GCP</span>
-        <span class="tag">Python</span>
-        <span class="tag">Bash</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Kubernetes</span>
-        <span class="tag">Distributed Databases</span>
-        <span class="tag">Automation</span>
-        <span class="tag">Observability</span>
-        <span class="tag">LLMs</span>
-        <span class="tag">RAG</span>
-      </div>
-    </section>
+      <main class="main">
+        <section class="section">
+          <h2 class="hero-title">Selected Work and Engineering Focus</h2>
+          <p class="subtitle">A clean portfolio view of projects, skills, and technical strengths.</p>
+          <p class="intro">
+            Portfolio highlighting my experience in cloud platforms, Linux systems, distributed databases, automation, and LLM-based AI systems. Includes technical projects and engineering work across modern data and AI infrastructure.
+          </p>
+        </section>
 
-    <section class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li>AI DevOps Observability Platform</li>
-        <li>LLM-based RAG System</li>
-        <li>Streaming Data Pipeline</li>
-      </ul>
-    </section>
+        <section class="section">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="grid-3">
+            <article class="project-card">
+              <h3>AI DevOps Observability Platform</h3>
+              <p>Built an AI-driven system for log analysis, anomaly detection, and troubleshooting recommendations in cloud and containerized environments.</p>
+              <div class="project-meta">Cloud • Observability • Automation</div>
+            </article>
 
-    <div class="footer">© 2026 Sayali Joshi</div>
-  </main>
+            <article class="project-card">
+              <h3>LLM-Based RAG System</h3>
+              <p>Designed a retrieval-augmented generation workflow with vector search, prompting, evaluation, and customizable knowledge retrieval.</p>
+              <div class="project-meta">LLMs • RAG • Evaluation</div>
+            </article>
+
+            <article class="project-card">
+              <h3>Streaming Data Pipeline</h3>
+              <p>Developed an event-driven ingestion pipeline for processing and classifying high-volume operational data in near real time.</p>
+              <div class="project-meta">Streaming • Cloud • Data</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Core Focus Areas</h2>
+          <div class="grid-3">
+            <article class="interest-card">
+              <h3>Cloud Engineering</h3>
+              <p>Reliable infrastructure, platform troubleshooting, automation, and production support across modern cloud systems.</p>
+            </article>
+            <article class="interest-card">
+              <h3>Distributed Data Systems</h3>
+              <p>Hands-on work with scalable architectures, data platforms, and operational problem solving in distributed environments.</p>
+            </article>
+            <article class="interest-card">
+              <h3>AI and LLM Applications</h3>
+              <p>Practical work around LLM-based systems, retrieval workflows, and AI-enabled engineering use cases.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section two-col">
+          <article class="about-card">
+            <h3>About</h3>
+            <p>
+              I work across cloud infrastructure, Linux systems, distributed data platforms, and AI-driven applications. My focus is on building reliable systems, improving operational workflows, and solving complex technical problems with a practical engineering approach.
+            </p>
+          </article>
+
+          <article class="skills-card">
+            <h3>Skills</h3>
+            <div class="tags">
+              <span class="tag">Linux</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Azure</span>
+              <span class="tag">GCP</span>
+              <span class="tag">Python</span>
+              <span class="tag">Bash</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Distributed Databases</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Observability</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">RAG</span>
+            </div>
+          </article>
+        </section>
+
+        <div class="footer">© 2026 Sayali Joshi</div>
+      </main>
+    </div>
+  </div>
 </body>
 </html>
