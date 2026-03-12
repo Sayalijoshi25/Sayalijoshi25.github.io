@@ -4,115 +4,236 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sayali Joshi</title>
-
 <style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  :root {
+    --page-bg-1: #eef7f4;
+    --page-bg-2: #f7fbff;
+    --card-bg: #ffffff;
+    --text: #183153;
+    --muted: #5f7590;
+    --blue: #2f6fed;
+    --green: #1ea672;
+    --border: #dce9f3;
+    --soft: #f3f9ff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
     margin: 0;
-    background: #ffffff;
-    color: #222;
-    line-height: 1.6;
-}
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, var(--page-bg-1) 0%, var(--page-bg-2) 100%);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    line-height: 1.65;
+  }
 
-.container {
-    max-width: 760px;
-    margin: 80px auto;
-    padding: 0 20px;
-}
+  .card {
+    width: 100%;
+    max-width: 900px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: 0 18px 50px rgba(34, 84, 122, 0.08);
+    padding: 44px;
+  }
 
-h1 {
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 28px;
+    margin-bottom: 30px;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .photo-wrap {
+    flex-shrink: 0;
+  }
+
+  .photo {
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid #e4f3ee;
+    background: linear-gradient(180deg, #eaf7ff 0%, #eefbf5 100%);
+  }
+
+  h1 {
     font-size: 32px;
     font-weight: 600;
-    margin-bottom: 6px;
-}
+    margin: 0 0 8px;
+    color: var(--text);
+  }
 
-.subtitle {
-    color: #666;
-    margin-bottom: 30px;
-}
+  .subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
 
-h2 {
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
+  .intro {
+    max-width: 580px;
+    margin: 0;
+    color: #35506f;
+  }
 
-p {
-    color: #444;
-}
+  .links {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
 
-.links a {
-    margin-right: 16px;
+  .links a {
     text-decoration: none;
-    color: #0366d6;
-}
+    color: var(--blue);
+    font-weight: 500;
+  }
 
-.links a:hover {
-    text-decoration: underline;
-}
+  .links a:hover {
+    color: var(--green);
+  }
 
-ul {
+  .section {
+    padding-top: 22px;
+    border-top: 1px solid #edf3f8;
+    margin-top: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: var(--text);
+  }
+
+  p {
+    margin: 0;
+    color: #35506f;
+  }
+
+  ul {
+    margin: 0;
     padding-left: 18px;
-}
+    color: #35506f;
+  }
 
-footer {
-    margin-top: 60px;
-    color: #888;
+  li + li {
+    margin-top: 6px;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .tag {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--soft);
+    border: 1px solid #d9e8f8;
+    color: #35506f;
     font-size: 14px;
-}
+  }
+
+  .footer {
+    margin-top: 28px;
+    font-size: 13px;
+    color: #7b91a7;
+  }
+
+  @media (max-width: 720px) {
+    .card {
+      padding: 28px;
+    }
+
+    .hero {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+
+    .intro {
+      max-width: 100%;
+    }
+
+    .links,
+    .skills {
+      justify-content: center;
+    }
+  }
 </style>
 </head>
-
 <body>
+  <main class="card">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Sayali Joshi</h1>
+        <div class="subtitle">Cloud • Linux • Distributed Systems • LLMs</div>
+        <p class="intro">
+          Portfolio highlighting my experience in cloud platforms, Linux systems, distributed databases, automation, and LLM-based AI systems.
+        </p>
+        <div class="links">
+          <a href="https://github.com/sayalijoshi25" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/sayali-joshi-74340a172/" target="_blank">LinkedIn</a>
+          <a href="mailto:your-email@example.com">Email</a>
+        </div>
+      </div>
 
-<div class="container">
+      <div class="photo-wrap">
+        <img class="photo" src="https://via.placeholder.com/300x360.png?text=Your+Photo" alt="Profile photo">
+      </div>
+    </section>
 
-<h1>Sayali Joshi</h1>
-<div class="subtitle">
-Cloud • Linux • Distributed Systems • LLMs
-</div>
+    <section class="section">
+      <h2>About</h2>
+      <p>
+        I work across cloud infrastructure, Linux systems, distributed data platforms, and AI-driven applications. My focus is on building reliable systems and solving complex operational problems.
+      </p>
+    </section>
 
-<p>
-Portfolio highlighting my experience in cloud platforms, Linux systems,
-distributed databases, automation, and LLM-based AI systems.
-</p>
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="tag">Linux</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Azure</span>
+        <span class="tag">GCP</span>
+        <span class="tag">Python</span>
+        <span class="tag">Bash</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Distributed Databases</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Observability</span>
+        <span class="tag">LLMs</span>
+        <span class="tag">RAG</span>
+      </div>
+    </section>
 
-<div class="links">
-<a href="https://github.com/sayalijoshi25">GitHub</a>
-<a href="https://linkedin.com">LinkedIn</a>
-<a href="mailto:your-email@example.com">Email</a>
-</div>
+    <section class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>AI DevOps Observability Platform</li>
+        <li>LLM-based RAG System</li>
+        <li>Streaming Data Pipeline</li>
+      </ul>
+    </section>
 
-<h2>About</h2>
-<p>
-I work across cloud infrastructure, Linux systems, distributed data platforms,
-and AI-driven applications. My focus is on building reliable systems and solving
-complex operational problems.
-</p>
-
-<h2>Skills</h2>
-<ul>
-<li>Linux</li>
-<li>AWS • Azure • GCP</li>
-<li>Python • Bash</li>
-<li>Docker • Kubernetes</li>
-<li>Distributed Databases</li>
-<li>Automation and Observability</li>
-<li>LLMs and RAG</li>
-</ul>
-
-<h2>Projects</h2>
-<ul>
-<li>AI DevOps Observability Platform</li>
-<li>LLM-based RAG System</li>
-<li>Streaming Data Pipeline</li>
-</ul>
-
-<footer>
-© 2026 Sayali Joshi
-</footer>
-
-</div>
-
+    <div class="footer">© 2026 Sayali Joshi</div>
+  </main>
 </body>
 </html>
